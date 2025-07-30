@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Today's Meal - Indian Vegetarian Recipe Suggestions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        saffron: {
+                            50: '#fefdf7',
+                            100: '#fef7e6',
+                            200: '#fdecc2',
+                            300: '#fbd894',
+                            400: '#f8c064',
+                            500: '#f5a623',
+                            600: '#e69112',
+                            700: '#c1740f',
+                            800: '#9d5d12',
+                            900: '#804d12'
+                        },
+                        indianGreen: {
+                            50: '#f0fdf4',
+                            100: '#dcfce7',
+                            200: '#bbf7d0',
+                            300: '#86efac',
+                            400: '#4ade80',
+                            500: '#22c55e',
+                            600: '#16a34a',
+                            700: '#15803d',
+                            800: '#166534',
+                            900: '#14532d'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-br from-orange-50 to-green-50 min-h-screen">
+    <!-- Sticky Header -->
+    <header class="sticky top-0 z-50 bg-gradient-to-r from-saffron-500 to-saffron-400 shadow-lg">
+        <div class="container mx-auto px-4 py-4">
+            <h1 class="text-2xl md:text-3xl font-bold text-white text-center">
+                <i class="fas fa-utensils mr-2"></i>
+Today's Meal
+            </h1>
+            <p class="text-saffron-100 text-center mt-1 text-sm md:text-base">AI-Powered Indian Vegetarian Recipe Suggestions</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-6 max-w-6xl">
+        <!-- Ingredient Selection Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-carrot text-saffron-500 mr-2"></i>
+                Select Your Available Ingredients
+            </h2>
+            
+            <!-- Manual Ingredient Input -->
+            <div class="mb-4">
+                <label for="manual-ingredient" class="block text-sm font-medium text-gray-700 mb-2">
+                    Add Custom Ingredient:
+                </label>
+                <div class="flex gap-2">
+                    <input 
+                        type="text" 
+                        id="manual-ingredient" 
+                        placeholder="Enter ingredient name..."
+                        class="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-saffron-500 focus:border-transparent"
+                    >
+                    <button 
+                        onclick="addManualIngredient()" 
+                        class="px-4 py-2 bg-saffron-500 text-white rounded-lg hover:bg-saffron-600 transition duration-200"
+                    >
+                        <i class="fas fa-plus"></i> Add
+                    </button>
+                </div>
+            </div>
+
+            <!-- Common Ingredients Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mb-4">
+                {% for ingredient in ingredients %}
+                <label class="flex items-center space-x-2 p-3 border border-gray-200 rounded-lg hover:bg-saffron-50 hover:border-saffron-300 cursor-pointer transition duration-200">
+                    <input 
+                        type="checkbox" 
+                        value="{{ ingredient }}" 
+                        class="ingredient-checkbox text-saffron-500 focus:ring-saffron-500 rounded"
+                    >
+                    <span class="text-sm text-gray-700 capitalize">{{ ingredient }}</span>
+                </label>
+                {% endfor %}
+            </div>
+
+            <!-- Selected Ingredients Display -->
+            <div id="selected-ingredients" class="mb-4">
+                <h3 class="text-sm font-medium text-gray-700 mb-2">Selected Ingredients:</h3>
+                <div id="selected-tags" class="flex flex-wrap gap-2 min-h-[40px] p-2 border border-gray-200 rounded-lg bg-gray-50">
+                    <span class="text-gray-400 text-sm">No ingredients selected yet...</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="bg-white rounded-xl shadow-lg p-6 mb-6">
+            <h2 class="text-xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-filter text-indianGreen-500 mr-2"></i>
+                Dietary Preferences & Filters
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                <!-- Meal Type -->
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Meal Type:</label>
+                    <select id="meal-type" class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-indianGreen-500 focus:border-transparent">
+                        <option value="All">All Meals</option>
+                        <option value="Breakfast">🌅 Breakfast</option>
+                        <option value="Lunch">☀️ Lunch</option>
+                        <option value="Dinner">🌙 Dinner</option>
+                        <option value="Snacks">🍽️ Snacks</option>
+                    </select>
+                </div>
+
+                <!-- Dietary Filters -->
+                <div class="md:col-span-2 lg:col-span-2">
+                    <label class="block text-sm font-medium text-gray-700 mb-2">Dietary Preferences:</label>
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" id="no-onion-garlic" class="text-indianGreen-500 focus:ring-indianGreen-500 rounded">
+                            <span class="text-sm">❌ No Onion/Garlic</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" id="jain" class="text-indianGreen-500 focus:ring-indianGreen-500 rounded">
+                            <span class="text-sm">✅ Jain</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" id="satvik" class="text-indianGreen-500 focus:ring-indianGreen-500 rounded">
+                            <span class="text-sm">🕉️ Satvik</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" id="quick" class="text-indianGreen-500 focus:ring-indianGreen-500 rounded">
+                            <span class="text-sm">⚡ Quick (&lt;20 min)</span>
+                        </label>
+                        <label class="flex items-center space-x-2 cursor-pointer">
+                            <input type="checkbox" id="healthy" class="text-indianGreen-500 focus:ring-indianGreen-500 rounded">
+                            <span class="text-sm">🧘 Healthy</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row gap-3 mb-6">
+            <button 
+                onclick="searchRecipes()" 
+                class="flex-1 bg-gradient-to-r from-saffron-500 to-saffron-600 text-white px-6 py-3 rounded-lg font-semibold hover:from-saffron-600 hover:to-saffron-700 transition duration-200 shadow-lg"
+            >
+                <i class="fas fa-search mr-2"></i>
+                Find Recipes
+            </button>
+            <button 
+                onclick="resetFilters()" 
+                class="flex-1 sm:flex-none bg-gray-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-600 transition duration-200"
+            >
+                <i class="fas fa-redo mr-2"></i>
+                Reset
+            </button>
+            <button 
+                onclick="toggleFavorites()" 
+                class="flex-1 sm:flex-none bg-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-pink-600 transition duration-200"
+            >
+                <i class="fas fa-heart mr-2"></i>
+                <span id="favorites-button-text">View Favorites</span>
+            </button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loading" class="hidden text-center py-8">
+            <div class="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-saffron-500"></div>
+            <p class="mt-2 text-gray-600">Finding perfect recipes for you...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="results-section" class="hidden">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-clipboard-list text-saffron-500 mr-2"></i>
+                Recipe Suggestions
+            </h2>
+            <div id="results-message" class="mb-4 p-4 rounded-lg"></div>
+            <div id="recipe-results" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </div>
+
+        <!-- Favorites Section -->
+        <div id="favorites-section" class="hidden">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+                <i class="fas fa-heart text-pink-500 mr-2"></i>
+                Your Favorite Recipes
+            </h2>
+            <div id="favorites-results" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </div>
+    </main>
+
+    <!-- AI Instructions Modal -->
+    <div id="ai-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex justify-between items-center mb-4">
+                    <h3 class="text-xl font-semibold text-gray-800">
+                        <i class="fas fa-robot text-saffron-500 mr-2"></i>
+                        AI Cooking Guide
+                    </h3>
+                    <button onclick="closeAIModal()" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-xl"></i>
+                    </button>
+                </div>
+                <div id="ai-content" class="space-y-6">
+                    <!-- AI content will be loaded here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 mt-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">
+                <i class="fas fa-code mr-1"></i>
+                v1.0 – Made with ❤️ by Bhanu
+            </p>
+            <p class="text-xs text-gray-400 mt-2">
+                Bringing authentic Indian vegetarian cooking to your kitchen
+            </p>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

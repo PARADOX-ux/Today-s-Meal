@@ -1,0 +1,95 @@
+I want to build a professional, AI-powered Indian vegetarian cooking suggestion web app using Python and Flask on Replit.
+
+👨‍🍳 Purpose:
+The app helps Indian users decide what to cook. They enter or select ingredients they have, and the app suggests 5–10 Indian vegetarian dishes they can make at home — with full steps explained like an Indian mom would.
+
+🛠️ Functional Features:
+1. Ingredient Input:
+   - Multi-select checkboxes or tags
+   - Manual text input supported
+
+2. Recipe Matching Logic:
+   - Compare user ingredients with a local recipe dataset (`recipes.json` or dict in Python)
+   - Suggest dishes based on % of matched ingredients
+   - Show best 5–10 matches with:
+     - Dish name
+     - Match %
+     - Missing ingredients
+     - Estimated cook time
+     - Step-by-step cooking instructions in natural, home-style Indian English
+
+3. Filters to Include:
+   - ❌ No Onion/Garlic
+   - ✅ Jain
+   - 🕉️ Satvik
+   - ⚡ Quick recipes (<20 min)
+   - 🧘 Healthy recipes
+   - 🍽️ Meal type selector: Breakfast, Lunch, Dinner, Snacks
+
+4. Save Favorites Feature:
+   - Add ❤️ “Save to Favorites” button (use localStorage or Replit DB)
+
+5. Reset Button:
+   - Reset ingredients and reload suggestions
+
+🎨 UI / Design Requirements:
+- Mobile-friendly and clean layout
+- Use **TailwindCSS** via CDN
+- Color theme: soft Indian tones (light saffron, green, off-white)
+- Beautiful sticky header: “Aaj Kya Banaye?”
+- Card-style layout for dish suggestions with:
+   - Rounded corners
+   - Drop shadow
+   - Icons (e.g., 🕒 for time, ✅ for matches)
+- Footer with version and credit: “v1.0 – Made by Bhanu”
+
+🤖 GPT-4 AI Integration:
+When a user clicks on “Cook This”:
+- Call the GPT-4 API using OpenAI
+- Send the selected dish name + user’s current ingredients
+- AI should return:
+   - Step-by-step cooking instructions in friendly tone
+   - Suggestions for substitutions (e.g., “Use jeera instead of ajwain”)
+   - Tips like: “Add hing for digestion” or “Use mustard oil for aroma”
+   - Cultural context if possible (e.g., “Popular Sunday breakfast in Punjab”)
+- Display AI response below the recipe or in a modal popup
+
+🗂️ Files to Create:
+1. `main.py` – Flask backend with all logic
+2. `templates/index.html` – TailwindCSS styled frontend
+3. `recipes.json` – Sample dataset (include at least 5–10 recipes to start)
+4. Optional: Small `script.js` to handle favorite button + filters
+
+🧾 Sample structure for `recipes.json`:
+```json
+[
+  {
+    "name": "Aloo Paratha",
+    "ingredients": ["potato", "onion", "wheat flour", "green chili", "coriander", "salt"],
+    "time": "30 min",
+    "steps": [
+      "Boil potatoes and mash them.",
+      "Mix mashed potatoes with chopped onion, green chili, coriander, and salt.",
+      "Knead wheat flour into dough.",
+      "Roll dough into circles, fill with potato mix, and roll again.",
+      "Cook on hot tawa with ghee until golden brown on both sides.",
+      "Serve hot with curd or pickle."
+    ],
+    "type": "Breakfast",
+    "tags": ["No Onion/Garlic", "Quick"]
+  },
+  {
+    "name": "Kadhi Pakora",
+    "ingredients": ["besan", "curd", "turmeric", "mustard seeds", "fenugreek", "onion", "salt", "oil"],
+    "time": "45 min",
+    "steps": [
+      "Make a smooth kadhi mixture with besan and curd.",
+      "Cook on low flame with turmeric and salt until thick.",
+      "Fry onion pakoras in hot oil.",
+      "Add pakoras to kadhi and temper with mustard and fenugreek.",
+      "Simmer and serve with rice."
+    ],
+    "type": "Lunch",
+    "tags": ["Satvik", "Healthy"]
+  }
+]

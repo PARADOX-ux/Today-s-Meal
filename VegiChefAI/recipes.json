@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Aloo Paratha",
+    "ingredients": ["potato", "wheat flour", "onion", "green chili", "coriander", "salt", "oil", "cumin powder"],
+    "time": "30 min",
+    "steps": [
+      "Boil potatoes until tender and mash them well",
+      "Mix mashed potatoes with finely chopped onion, green chili, coriander leaves, salt, and cumin powder",
+      "Knead wheat flour with water and a pinch of salt to make soft dough",
+      "Roll dough into small circles, place potato filling in center",
+      "Seal edges and roll again carefully into a flat paratha",
+      "Cook on hot tawa with oil/ghee until golden brown spots appear on both sides",
+      "Serve hot with fresh curd, pickle, or butter"
+    ],
+    "type": "Breakfast",
+    "tags": ["Quick", "Comfort Food"]
+  },
+  {
+    "name": "Kadhi Pakora",
+    "ingredients": ["besan", "curd", "turmeric", "mustard seeds", "cumin seeds", "fenugreek seeds", "onion", "salt", "oil", "ginger", "green chili"],
+    "time": "45 min",
+    "steps": [
+      "Mix besan with curd, turmeric, and salt to make smooth kadhi batter",
+      "Make pakoras by mixing besan with chopped onions, salt, and spices, then deep fry",
+      "In a pan, heat oil and add mustard seeds, cumin seeds, and fenugreek seeds",
+      "Add ginger-green chili paste and sauté briefly",
+      "Pour kadhi mixture and bring to boil, then simmer on low heat for 20 minutes",
+      "Add fried pakoras to the kadhi and simmer for 5 more minutes",
+      "Garnish with fresh coriander and serve hot with steamed rice"
+    ],
+    "type": "Lunch",
+    "tags": ["Satvik", "Healthy", "Comfort Food"]
+  },
+  {
+    "name": "Rajma Chawal",
+    "ingredients": ["rajma", "onion", "tomato", "ginger", "garlic", "cumin seeds", "turmeric", "red chili powder", "garam masala", "salt", "oil", "rice"],
+    "time": "60 min",
+    "steps": [
+      "Soak rajma overnight, then pressure cook with salt until soft",
+      "Cook basmati rice separately and keep aside",
+      "Heat oil in pan, add cumin seeds and let them splutter",
+      "Add chopped onions and sauté until golden brown",
+      "Add ginger-garlic paste and cook for 2 minutes",
+      "Add chopped tomatoes, turmeric, red chili powder, and cook until tomatoes break down",
+      "Add cooked rajma with its water, garam masala, and simmer for 15 minutes",
+      "Adjust consistency and seasoning, garnish with coriander",
+      "Serve hot rajma over steamed rice with onion slices and pickle"
+    ],
+    "type": "Lunch",
+    "tags": ["Healthy", "Protein Rich"]
+  },
+  {
+    "name": "Palak Paneer",
+    "ingredients": ["spinach", "paneer", "onion", "tomato", "ginger", "garlic", "green chili", "cumin seeds", "turmeric", "garam masala", "cream", "salt", "oil"],
+    "time": "35 min",
+    "steps": [
+      "Blanch spinach leaves in boiling water for 2 minutes, then blend to smooth puree",
+      "Cut paneer into cubes and lightly fry until golden, set aside",
+      "Heat oil in pan, add cumin seeds",
+      "Add chopped onions and sauté until translucent",
+      "Add ginger-garlic paste and green chilies, cook for 2 minutes",
+      "Add chopped tomatoes, turmeric, and cook until soft",
+      "Add spinach puree, salt, and garam masala, simmer for 10 minutes",
+      "Gently add paneer cubes and cream, cook for 5 minutes",
+      "Serve hot with roti or naan and a dollop of butter"
+    ],
+    "type": "Dinner",
+    "tags": ["Healthy", "Protein Rich"]
+  },
+  {
+    "name": "Chole Bhature",
+    "ingredients": ["chickpeas", "onion", "tomato", "ginger", "garlic", "cumin seeds", "coriander seeds", "turmeric", "red chili powder", "garam masala", "amchur", "salt", "oil", "wheat flour", "curd", "baking powder"],
+    "time": "90 min",
+    "steps": [
+      "Soak chickpeas overnight, then pressure cook until soft",
+      "For bhature, mix wheat flour, curd, salt, baking powder, and oil to make soft dough",
+      "Heat oil in pan, add cumin and coriander seeds",
+      "Add chopped onions and sauté until golden",
+      "Add ginger-garlic paste and cook for 2 minutes",
+      "Add tomatoes, turmeric, red chili powder, and cook until soft",
+      "Add cooked chickpeas with water, garam masala, amchur, and simmer for 20 minutes",
+      "Roll bhature dough into circles and deep fry until puffed and golden",
+      "Serve hot chole with crispy bhature, onion slices, and pickle"
+    ],
+    "type": "Lunch",
+    "tags": ["Comfort Food", "Protein Rich"]
+  },
+  {
+    "name": "Dal Tadka",
+    "ingredients": ["toor dal", "onion", "tomato", "ginger", "garlic", "green chili", "mustard seeds", "cumin seeds", "turmeric", "red chili powder", "asafoetida", "salt", "ghee", "coriander"],
+    "time": "40 min",
+    "steps": [
+      "Wash toor dal and pressure cook with turmeric and salt until mushy",
+      "Heat ghee in pan, add mustard seeds and cumin seeds",
+      "Add asafoetida, chopped ginger, garlic, and green chilies",
+      "Add chopped onions and sauté until translucent",
+      "Add tomatoes, red chili powder, and cook until soft",
+      "Add cooked dal and adjust consistency with water",
+      "Simmer for 10 minutes, adjust seasoning",
+      "Garnish with fresh coriander and serve hot with rice or roti"
+    ],
+    "type": "Lunch",
+    "tags": ["Quick", "Healthy", "Satvik", "Protein Rich"]
+  },
+  {
+    "name": "Aloo Gobi",
+    "ingredients": ["potato", "cauliflower", "onion", "tomato", "ginger", "green chili", "cumin seeds", "turmeric", "red chili powder", "garam masala", "salt", "oil", "coriander"],
+    "time": "25 min",
+    "steps": [
+      "Cut potatoes and cauliflower into medium pieces",
+      "Heat oil in pan, add cumin seeds",
+      "Add potato pieces and fry until half cooked",
+      "Add cauliflower florets and mix well",
+      "Add turmeric, red chili powder, salt, and mix",
+      "Cover and cook on medium heat for 15 minutes, stirring occasionally",
+      "Add chopped onions, tomatoes, ginger, and green chilies",
+      "Cook uncovered until vegetables are tender and lightly browned",
+      "Sprinkle garam masala and fresh coriander, serve hot with roti"
+    ],
+    "type": "Dinner",
+    "tags": ["Quick", "Healthy", "Jain"]
+  },
+  {
+    "name": "Masala Dosa",
+    "ingredients": ["rice", "urad dal", "fenugreek seeds", "potato", "onion", "mustard seeds", "cumin seeds", "turmeric", "green chili", "ginger", "curry leaves", "salt", "oil"],
+    "time": "20 min",
+    "steps": [
+      "Soak rice and urad dal separately for 4-6 hours with fenugreek seeds",
+      "Grind to smooth batter and ferment overnight",
+      "For filling, boil potatoes and mash coarsely",
+      "Heat oil, add mustard seeds, cumin seeds, and curry leaves",
+      "Add chopped onions, ginger, green chilies, and sauté",
+      "Add mashed potatoes, turmeric, salt, and mix well",
+      "Heat dosa pan, spread batter in thin layer",
+      "Drizzle oil around edges and cook until golden",
+      "Add potato filling, fold dosa, and serve hot with coconut chutney and sambar"
+    ],
+    "type": "Breakfast",
+    "tags": ["Healthy", "Satvik"]
+  },
+  {
+    "name": "Bhindi Masala",
+    "ingredients": ["okra", "onion", "tomato", "ginger", "garlic", "cumin seeds", "turmeric", "red chili powder", "coriander powder", "garam masala", "amchur", "salt", "oil"],
+    "time": "30 min",
+    "steps": [
+      "Wash and dry okra completely, then cut into small pieces",
+      "Heat oil in pan and fry okra pieces until crispy, remove and set aside",
+      "In same pan, add cumin seeds",
+      "Add chopped onions and sauté until golden brown",
+      "Add ginger-garlic paste and cook for 2 minutes",
+      "Add tomatoes, turmeric, red chili powder, coriander powder",
+      "Cook until tomatoes break down and oil separates",
+      "Add fried okra, garam masala, amchur, and salt",
+      "Mix gently and cook for 5 minutes, garnish with coriander"
+    ],
+    "type": "Lunch",
+    "tags": ["Healthy", "Quick"]
+  },
+  {
+    "name": "Poha",
+    "ingredients": ["poha", "onion", "potato", "green chili", "ginger", "mustard seeds", "cumin seeds", "turmeric", "curry leaves", "peanuts", "salt", "oil", "coriander", "lemon"],
+    "time": "15 min",
+    "steps": [
+      "Rinse poha in water until soft, drain and set aside",
+      "Heat oil in pan, add mustard seeds and cumin seeds",
+      "Add peanuts and fry until lightly golden",
+      "Add curry leaves, chopped ginger, and green chilies",
+      "Add chopped onions and sauté until translucent",
+      "Add diced potatoes, turmeric, salt, and cook until potatoes are done",
+      "Add drained poha and mix gently",
+      "Cook for 2-3 minutes, sprinkle lemon juice",
+      "Garnish with fresh coriander and serve hot"
+    ],
+    "type": "Breakfast",
+    "tags": ["Quick", "Jain", "Healthy"]
+  },
+  {
+    "name": "Samosa",
+    "ingredients": ["wheat flour", "potato", "green peas", "onion", "ginger", "green chili", "cumin seeds", "coriander seeds", "turmeric", "red chili powder", "garam masala", "salt", "oil"],
+    "time": "60 min",
+    "steps": [
+      "Make dough with wheat flour, oil, and water, knead well and rest",
+      "Boil potatoes and green peas, mash potatoes coarsely",
+      "Heat oil, add cumin and coriander seeds",
+      "Add chopped onions, ginger, green chilies, and sauté",
+      "Add mashed potatoes, peas, turmeric, red chili powder, garam masala, and salt",
+      "Mix well and let filling cool completely",
+      "Roll dough into oval shapes, cut in half to make cones",
+      "Fill cones with potato mixture and seal edges with water",
+      "Deep fry samosas until golden brown and crispy",
+      "Serve hot with mint chutney and tamarind chutney"
+    ],
+    "type": "Snacks",
+    "tags": ["Comfort Food"]
+  },
+  {
+    "name": "Upma",
+    "ingredients": ["semolina", "onion", "green chili", "ginger", "mustard seeds", "cumin seeds", "chana dal", "urad dal", "curry leaves", "salt", "oil", "coriander"],
+    "time": "20 min",
+    "steps": [
+      "Dry roast semolina in a pan until lightly golden and aromatic",
+      "Heat oil in pan, add mustard seeds, cumin seeds, chana dal, and urad dal",
+      "Add curry leaves, chopped ginger, and green chilies",
+      "Add chopped onions and sauté until translucent",
+      "Add 3 cups of water and salt, bring to boil",
+      "Gradually add roasted semolina while stirring continuously to avoid lumps",
+      "Cook on low heat for 5-7 minutes until water is absorbed",
+      "Garnish with fresh coriander and serve hot",
+      "Can be served with coconut chutney or pickle"
+    ],
+    "type": "Breakfast",
+    "tags": ["Quick", "Healthy", "Satvik"]
+  }
+]
