@@ -1,7 +1,10 @@
 services:
-- type: web
-  name: aaj-kya-banaye
-  env: python
-  plan: free
-  buildCommand: ""
-  startCommand: "python main.py"
+  - type: web
+    name: todays-meal
+    runtime: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "python app.py"
+    env: python
+    plan: free
+    region: oregon
+    branch: main
